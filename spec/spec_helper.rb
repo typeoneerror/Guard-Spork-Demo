@@ -15,19 +15,16 @@ Spork.prefork do
   RSpec.configure do |config|
     # Mock Framework
     config.mock_with :rspec
+
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, remove the following line or assign false
     # instead of true.
     config.use_transactional_fixtures = true
-    
-    # ActiveSupport::Dependencies.clear
   end
 
 end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  # load "#{Rails.root}/config/routes.rb"
-  # Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
 end
 
